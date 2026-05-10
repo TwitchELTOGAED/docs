@@ -1,133 +1,31 @@
----
-title: "Introduction"
-description: "Welcome to the new home for your documentation"
-icon: 'star'
----
+# La Cochera de la Nieve - Documentación Técnica
 
-## Setting up
+Bienvenidos al manual de arquitectura y mantenimiento del sistema multiplataforma desarrollado para **La Cochera de la Nieve**. Este proyecto supone la transformación digital de un comercio local, ofreciendo una solución moderna, escalable y centralizada.
 
-Get your documentation site up and running in minutes.
+## Arquitectura del Sistema
 
-<Card
-  title="Start here"
-  icon="rocket"
-  href="/quickstart"
-  horizontal
->
-  Follow our three step quickstart guide.
-</Card>
+El proyecto sigue una arquitectura cliente-servidor dividida en tres pilares fundamentales que operan de forma sincronizada:
 
-## Make it yours
+* **Frontend Web (PWA):** Desarrollado con **Next.js (React)** y desplegado en la nube mediante **Vercel** con Integración y Despliegue Continuo (CI/CD). Garantiza un SEO óptimo y tiempos de carga mínimos.
+* **Frontend Móvil:** Aplicación nativa para Android desarrollada en **Kotlin** utilizando el moderno framework declarativo **Jetpack Compose**.
+* **Backend as a Service (BaaS):** Centralizado en **Supabase** (PostgreSQL). Se encarga de gestionar la autenticación de usuarios, la base de datos relacional y el almacenamiento (Storage) de las imágenes del catálogo en la nube.
+* **Procesamiento de Pagos:** Integración segura con la pasarela **Stripe** para procesar transacciones garantizando el cumplimiento de la normativa PCI-DSS, delegando el manejo de datos sensibles.
 
-Design a docs site that looks great and empowers your users.
+## Funcionalidades Core
 
-<Columns cols={2}>
-  <Card
-    title="Edit locally"
-    icon="pen-to-square"
-    href="/development"
-  >
-    Edit your docs locally and preview them in real time.
-  </Card>
-  <Card
-    title="Customize your site"
-    icon="palette"
-    href="/essentials/settings"
-  >
-    Customize the design and colors of your site to match your brand.
-  </Card>
-    <Card
-    title="Set up navigation"
-    icon="map"
-    href="/essentials/navigation"
-  >
-    Organize your docs to help users find what they need and succeed with your product.
-  </Card>
-  <Card
-    title="API documentation"
-    icon="terminal"
-    href="/api-reference/introduction"
-  >
-    Auto-generate API documentation from OpenAPI specifications.
-  </Card>
-</Columns>
+* **Sincronización Multiplataforma:** Cualquier modificación del inventario en la base de datos se refleja instantáneamente tanto en la plataforma web como en la aplicación móvil.
+* **Gestión Integral de Pedidos (Back-office):** Panel de administración exclusivo para gestionar el ciclo de vida de las compras (Pendiente, Enviado, Entregado) con sistema de notificaciones integrado.
+* **Catálogo Dinámico (CRUD avanzado):** Creación, edición en caliente y sistema de borrado lógico (ocultación) de productos para gestionar eficientemente los cambios de temporada o falta de stock temporal.
 
-## Create beautiful pages
+## Accesos y Credenciales de Evaluación
 
-Everything you need to create world-class documentation.
+Para facilitar las labores de corrección y prueba de las funcionalidades restringidas al tribunal evaluador, se han habilitado los siguientes perfiles de prueba:
 
-<Columns cols={2}>
-  <Card
-    title="Write with MDX"
-    icon="pen-fancy"
-    href="/essentials/markdown"
-  >
-    Use MDX to style your docs pages.
-  </Card>
-  <Card
-    title="Code samples"
-    icon="code"
-    href="/essentials/code"
-  >
-    Add sample code to demonstrate how to use your product.
-  </Card>
-  <Card
-    title="Images"
-    icon="image"
-    href="/essentials/images"
-  >
-    Display images and other media.
-  </Card>
-  <Card
-    title="Reusable snippets"
-    icon="recycle"
-    href="/essentials/reusable-snippets"
-  >
-    Write once and reuse across your docs.
-  </Card>
-</Columns>
+**Perfil Administrador (Gestión total del sistema):**
+* **Acceso:** Ruta `/admin` en la plataforma web.
+* **Email:** `admin@lacochera`
+* **Contraseña:** `1AdminCochera2.`
 
-## Make your content agent ready
-
-Make your docs work for humans and AI agents alike.
-
-<Columns cols={2}>
-  <Card
-    title="Prompt component"
-    icon="robot"
-    href="/agent-ready/prompt"
-  >
-    Embed shareable AI prompts readers can copy or open in Cursor.
-  </Card>
-  <Card
-    title="Visibility"
-    icon="eye"
-    href="/agent-ready/visibility"
-  >
-    Show different content to humans and agents reading your docs.
-  </Card>
-  <Card
-    title="Contextual menu"
-    icon="bolt"
-    href="/agent-ready/contextual"
-  >
-    Give readers one-click access to Claude, ChatGPT, Cursor, and more.
-  </Card>
-  <Card
-    title="AI coding tools"
-    icon="wand-magic-sparkles"
-    href="/ai-tools/claude-code"
-  >
-    Set up Claude Code, Cursor, or Windsurf with Mintlify's skill.
-  </Card>
-</Columns>
-
-## Need inspiration?
-
-<Card
-  title="See complete examples"
-  icon="stars"
-  href="https://mintlify.com/customers"
->
-  Browse our showcase of exceptional documentation sites.
-</Card>
+**Perfil Cliente (Pruebas de carrito y pasarela):**
+* **Email:** `Snow_pro@prueba.com`
+* **Contraseña:** `NievePolvo123`
